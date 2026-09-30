@@ -1,0 +1,217 @@
+﻿.venv\Scripts\python.exe : 
+At line:1 char:440
++ ... -oss-120b"; .venv\Scripts\python.exe -u -W ignore eval\run_eval.py ra ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Evaluating:   0%|          | 0/48 [00:00<?, ?it/s]Exception raised in Job[0]: OpenAIRateLimitError(Error code: 429 - 
+{'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199734, 
+Requested 1888. Please try again in 11m40.704s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:   2%|▏         | 1/48 [02:05<1:38:20, 125.55s/it]Exception raised in Job[1]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199431, 
+Requested 1572. Please try again in 7m13.296s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:   4%|▍         | 2/48 [04:16<1:38:34, 128.58s/it]
+Evaluating:   6%|▋         | 3/48 [04:51<1:04:19, 85.76s/it] Exception raised in Job[3]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199770, 
+Requested 1019. Please try again in 5m40.847999999s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:   8%|▊         | 4/48 [06:17<1:03:02, 85.98s/it]Exception raised in Job[4]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199175, 
+Requested 1482. Please try again in 4m43.824s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  10%|█         | 5/48 [10:34<1:45:51, 147.72s/it]
+Evaluating:  12%|█▎        | 6/48 [12:01<1:28:49, 126.89s/it]Exception raised in Job[6]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199455, 
+Requested 828. Please try again in 2m2.256s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  15%|█▍        | 7/48 [14:47<1:35:39, 139.99s/it]Exception raised in Job[7]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199075, 
+Requested 1488. Please try again in 4m3.215999999s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  17%|█▋        | 8/48 [17:32<1:38:30, 147.76s/it]
+Evaluating:  19%|█▉        | 9/48 [17:45<1:08:35, 105.54s/it]Exception raised in Job[9]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199460, 
+Requested 783. Please try again in 1m44.976s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  21%|██        | 10/48 [19:49<1:10:35, 111.46s/it]Exception raised in Job[10]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199048, 
+Requested 1637. Please try again in 4m55.92s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  23%|██▎       | 11/48 [22:47<1:21:18, 131.86s/it]
+Evaluating:  25%|██▌       | 12/48 [23:00<57:26, 95.73s/it]   Exception raised in Job[12]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199575, 
+Requested 3299. Please try again in 20m41.568s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  27%|██▋       | 13/48 [30:10<1:54:53, 196.95s/it]Exception raised in Job[13]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199329, 
+Requested 1481. Please try again in 5m49.919999999s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  29%|██▉       | 14/48 [31:57<1:36:06, 169.61s/it]
+Evaluating:  31%|███▏      | 15/48 [33:34<1:21:14, 147.70s/it]Exception raised in Job[15]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199539, 
+Requested 3524. Please try again in 22m3.216s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  33%|███▎      | 16/48 [41:22<2:10:17, 244.31s/it]Exception raised in Job[16]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199074, 
+Requested 1881. Please try again in 6m52.56s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  35%|███▌      | 17/48 [44:43<1:59:29, 231.29s/it]
+Evaluating:  38%|███▊      | 18/48 [44:57<1:22:54, 165.83s/it]Exception raised in Job[18]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199279, 
+Requested 3465. Please try again in 19m45.408s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  40%|███▉      | 19/48 [55:02<2:23:59, 297.93s/it]Exception raised in Job[19]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198879, 
+Requested 1588. Please try again in 3m21.744s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  42%|████▏     | 20/48 [57:55<2:01:29, 260.33s/it]
+Evaluating:  44%|████▍     | 21/48 [58:08<1:23:41, 185.98s/it]Exception raised in Job[21]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199400, 
+Requested 3226. Please try again in 18m54.432s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  46%|████▌     | 22/48 [1:05:42<1:55:25, 266.38s/it]Exception raised in Job[22]: 
+OpenAIRateLimitError(Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in 
+organization `org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 
+199060, Requested 1752. Please try again in 5m50.784s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  48%|████▊     | 23/48 [1:08:09<1:36:02, 230.52s/it]
+Evaluating:  50%|█████     | 24/48 [1:08:21<1:06:02, 165.10s/it]Exception raised in Job[24]: 
+OpenAIRateLimitError(Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in 
+organization `org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 
+199363, Requested 792. Please try again in 1m6.959999999s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  52%|█████▏    | 25/48 [1:11:31<1:06:06, 172.45s/it]Exception raised in Job[25]: 
+OpenAIRateLimitError(Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in 
+organization `org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 
+199051, Requested 1741. Please try again in 5m42.144s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  54%|█████▍    | 26/48 [1:13:45<59:04, 161.12s/it]  
+Evaluating:  56%|█████▋    | 27/48 [1:13:58<40:49, 116.65s/it]Exception raised in Job[27]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199293, 
+Requested 870. Please try again in 1m10.416s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  58%|█████▊    | 28/48 [1:17:47<50:04, 150.23s/it]Exception raised in Job[28]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198781, 
+Requested 1979. Please try again in 5m28.32s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  60%|██████    | 29/48 [1:21:28<54:17, 171.45s/it]
+Evaluating:  62%|██████▎   | 30/48 [1:21:40<37:08, 123.81s/it]Exception raised in Job[30]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199393, 
+Requested 906. Please try again in 2m9.168s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  65%|██████▍   | 31/48 [1:22:27<28:32, 100.74s/it]Exception raised in Job[31]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198769, 
+Requested 1489. Please try again in 1m51.455999999s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  67%|██████▋   | 32/48 [1:26:57<40:22, 151.40s/it]
+Evaluating:  69%|██████▉   | 33/48 [1:27:11<27:31, 110.07s/it]Exception raised in Job[33]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199566, 
+Requested 2813. Please try again in 17m7.727999999s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  71%|███████   | 34/48 [1:33:14<43:27, 186.21s/it]Exception raised in Job[34]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198972, 
+Requested 1550. Please try again in 3m45.504s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  73%|███████▎  | 35/48 [1:37:31<44:54, 207.24s/it]
+Evaluating:  75%|███████▌  | 36/48 [1:37:43<29:44, 148.67s/it]Exception raised in Job[36]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199452, 
+Requested 2690. Please try again in 15m25.344s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  77%|███████▋  | 37/48 [1:43:47<39:07, 213.45s/it]Exception raised in Job[37]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198925, 
+Requested 1609. Please try again in 3m50.688s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  79%|███████▉  | 38/48 [1:47:35<36:17, 217.72s/it]
+Evaluating:  81%|████████▏ | 39/48 [1:47:48<23:27, 156.33s/it]Exception raised in Job[39]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199448, 
+Requested 983. Please try again in 3m6.191999999s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  83%|████████▎ | 40/48 [1:49:19<18:13, 136.67s/it]Exception raised in Job[40]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198946, 
+Requested 1602. Please try again in 3m56.736s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  85%|████████▌ | 41/48 [1:52:56<18:44, 160.66s/it]
+Evaluating:  88%|████████▊ | 42/48 [1:53:09<11:38, 116.34s/it]Exception raised in Job[42]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199528, 
+Requested 4579. Please try again in 29m34.224s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  90%|████████▉ | 43/48 [2:00:34<17:55, 215.11s/it]Exception raised in Job[43]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199209, 
+Requested 1517. Please try again in 5m13.632s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  92%|█████████▏| 44/48 [2:02:52<12:47, 191.81s/it]
+Evaluating:  94%|█████████▍| 45/48 [2:03:58<07:42, 154.06s/it]Exception raised in Job[45]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199402, 
+Requested 3188. Please try again in 18m38.88s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  96%|█████████▌| 46/48 [2:11:26<08:04, 242.27s/it]Exception raised in Job[46]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198822, 
+Requested 1578. Please try again in 2m52.8s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating:  98%|█████████▊| 47/48 [2:15:36<04:04, 244.77s/it]
+Evaluating: 100%|██████████| 48/48 [2:15:50<00:00, 175.40s/it]
+Evaluating: 100%|██████████| 48/48 [2:15:50<00:00, 169.80s/it]

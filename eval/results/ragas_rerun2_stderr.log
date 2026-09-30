@@ -1,0 +1,46 @@
+﻿.venv\Scripts\python.exe : 
+At line:1 char:528
++ ... -oss-120b"; .venv\Scripts\python.exe -u -W ignore eval\run_eval.py ra ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Evaluating:   0%|          | 0/32 [00:00<?, ?it/s]
+Evaluating:   3%|▎         | 1/32 [00:02<01:06,  2.13s/it]
+Evaluating:   6%|▋         | 2/32 [00:18<05:09, 10.30s/it]
+Evaluating:   9%|▉         | 3/32 [00:55<10:57, 22.67s/it]
+Evaluating:  12%|█▎        | 4/32 [01:53<17:01, 36.48s/it]
+Evaluating:  16%|█▌        | 5/32 [02:12<13:40, 30.39s/it]
+Evaluating:  19%|█▉        | 6/32 [03:10<17:09, 39.60s/it]
+Evaluating:  22%|██▏       | 7/32 [03:26<13:18, 31.92s/it]
+Evaluating:  25%|██▌       | 8/32 [04:24<16:02, 40.11s/it]
+Evaluating:  28%|██▊       | 9/32 [04:58<14:39, 38.26s/it]
+Evaluating:  31%|███▏      | 10/32 [05:54<16:06, 43.95s/it]
+Evaluating:  34%|███▍      | 11/32 [06:19<13:20, 38.13s/it]
+Evaluating:  38%|███▊      | 12/32 [07:19<14:55, 44.76s/it]
+Evaluating:  41%|████      | 13/32 [07:49<12:45, 40.28s/it]
+Evaluating:  44%|████▍     | 14/32 [08:41<13:07, 43.73s/it]
+Evaluating:  47%|████▋     | 15/32 [09:06<10:46, 38.05s/it]
+Evaluating:  50%|█████     | 16/32 [09:48<10:28, 39.27s/it]
+Evaluating:  53%|█████▎    | 17/32 [10:15<08:53, 35.57s/it]
+Evaluating:  56%|█████▋    | 18/32 [11:02<09:04, 38.92s/it]
+Evaluating:  59%|█████▉    | 19/32 [11:24<07:20, 33.87s/it]
+Evaluating:  62%|██████▎   | 20/32 [11:57<06:45, 33.79s/it]
+Evaluating:  66%|██████▌   | 21/32 [12:22<05:42, 31.17s/it]
+Evaluating:  69%|██████▉   | 22/32 [12:59<05:28, 32.85s/it]
+Evaluating:  72%|███████▏  | 23/32 [13:32<04:54, 32.72s/it]
+Evaluating:  75%|███████▌  | 24/32 [14:10<04:36, 34.51s/it]
+Evaluating:  78%|███████▊  | 25/32 [14:38<03:47, 32.44s/it]
+Evaluating:  81%|████████▏ | 26/32 [15:13<03:19, 33.22s/it]
+Evaluating:  84%|████████▍ | 27/32 [15:35<02:28, 29.79s/it]
+Evaluating:  88%|████████▊ | 28/32 [16:06<02:00, 30.19s/it]
+Evaluating:  91%|█████████ | 29/32 [16:53<01:45, 35.26s/it]
+Evaluating:  94%|█████████▍| 30/32 [18:09<01:34, 47.37s/it]
+Evaluating:  97%|█████████▋| 31/32 [18:38<00:42, 42.06s/it]Exception raised in Job[31]: OpenAIRateLimitError(Error 
+code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization 
+`org_01kx37m22qe21rzzt47asw77z9` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198159, 
+Requested 2222. Please try again in 2m44.592s. Need more tokens? Upgrade to Dev Tier today at 
+https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}})
+
+Evaluating: 100%|██████████| 32/32 [22:25<00:00, 97.61s/it]
+Evaluating: 100%|██████████| 32/32 [22:25<00:00, 42.06s/it]

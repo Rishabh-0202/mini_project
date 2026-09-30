@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1152pt" height="648pt" viewBox="0 0 1152 648" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-30T19:02:15.410595</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 648 
+L 1152 648 
+L 1152 0 
+L 0 0 
+z
+" style="fill: #fcfcfb"/>
+  </g>
+  <g id="patch_2">
+   <path d="M 80.64 252.72 
+L 184.32 252.72 
+Q 195.84 252.72 195.84 246.24 
+L 195.84 136.08 
+Q 195.84 129.6 184.32 129.6 
+L 80.64 129.6 
+Q 69.12 129.6 69.12 136.08 
+L 69.12 246.24 
+Q 69.12 252.72 80.64 252.72 
+z
+" style="fill: #f3f2ee; stroke: #e1e0d9; stroke-linejoin: miter"/>
+  </g>
+  <g id="patch_3">
+   <path d="M 230.4 252.72 
+L 334.08 252.72 
+Q 345.6 252.72 345.6 246.24 
+L 345.6 136.08 
+Q 345.6 129.6 334.08 129.6 
+L 230.4 129.6 
+Q 218.88 129.6 218.88 136.08 
+L 218.88 246.24 
+Q 218.88 252.72 230.4 252.72 
+z
+" style="fill: #f3f2ee; stroke: #e1e0d9; stroke-linejoin: miter"/>
+  </g>
+  <g id="patch_4">
+   <path d="M 197.839687 191.16 
+Q 207.359453 191.16 215.090364 191.16 
+" style="fill: none; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+   <path d="M 207.890364 187.56 
+L 215.090364 191.16 
+L 207.890364 194.76 
+z
+" style="fill: #898781; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+  </g>
+  <g id="patch_5">
+   <path d="M 380.16 252.72 
+L 483.84 252.72 
+Q 495.36 252.72 495.36 246.24 
+L 495.36 136.08 
+Q 495.36 129.6 483.84 129.6 
+L 380.16 129.6 
+Q 368.64 129.6 368.64 136.08 
+L 368.64 246.24 
+Q 368.64 252.72 380.16 252.72 
+z
+" style="fill: #f3f2ee; stroke: #e1e0d9; stroke-linejoin: miter"/>
+  </g>
+  <g id="patch_6">
+   <path d="M 347.599687 191.16 
+Q 357.119453 191.16 364.850364 191.16 
+" style="fill: none; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+   <path d="M 357.650364 187.56 
+L 364.850364 191.16 
+L 357.650364 194.76 
+z
+" style="fill: #898781; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+  </g>
+  <g id="patch_7">
+   <path d="M 529.92 252.72 
+L 633.6 252.72 
+Q 645.12 252.72 645.12 246.24 
+L 645.12 136.08 
+Q 645.12 129.6 633.6 129.6 
+L 529.92 129.6 
+Q 518.4 129.6 518.4 136.08 
+L 518.4 246.24 
+Q 518.4 252.72 529.92 252.72 
+z
+" style="fill: #f3f2ee; stroke: #e1e0d9; stroke-linejoin: miter"/>
+  </g>
+  <g id="patch_8">
+   <path d="M 497.359687 191.16 
+Q 506.879453 191.16 514.610364 191.16 
+" style="fill: none; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+   <path d="M 507.410364 187.56 
+L 514.610364 191.16 
+L 507.410364 194.76 
+z
+" style="fill: #898781; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+  </g>
+  <g id="patch_9">
+   <path d="M 829.44 252.72 
+L 1082.88 252.72 
+Q 1094.4 252.72 1094.4 246.24 
+L 1094.4 136.08 
+Q 1094.4 129.6 1082.88 129.6 
+L 829.44 129.6 
+Q 817.92 129.6 817.92 136.08 
+L 817.92 246.24 
+Q 817.92 252.72 829.44 252.72 
+z
+" style="fill: #f3f2ee; stroke: #2a78d6; stroke-width: 2; stroke-linejoin: miter"/>
+  </g>
+  <g id="patch_10">
+   <path d="M 647.12127 191.16 
+Q 731.521164 191.16 814.132204 191.16 
+" style="fill: none; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+   <path d="M 806.932204 187.56 
+L 814.132204 191.16 
+L 806.932204 194.76 
+z
+" style="fill: #898781; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+  </g>
+  <g id="patch_11">
+   <path d="M 80.64 453.6 
+L 184.32 453.6 
+Q 195.84 453.6 195.84 447.12 
+L 195.84 317.52 
+Q 195.84 311.04 184.32 311.04 
+L 80.64 311.04 
+Q 69.12 311.04 69.12 317.52 
+L 69.12 447.12 
+Q 69.12 453.6 80.64 453.6 
+z
+" style="fill: #f3f2ee; stroke: #e1e0d9; stroke-linejoin: miter"/>
+  </g>
+  <g id="patch_12">
+   <path d="M 230.4 453.6 
+L 334.08 453.6 
+Q 345.6 453.6 345.6 447.12 
+L 345.6 317.52 
+Q 345.6 311.04 334.08 311.04 
+L 230.4 311.04 
+Q 218.88 311.04 218.88 317.52 
+L 218.88 447.12 
+Q 218.88 453.6 230.4 453.6 
+z
+" style="fill: #f3f2ee; stroke: #e1e0d9; stroke-linejoin: miter"/>
+  </g>
+  <g id="patch_13">
+   <path d="M 197.839687 382.32 
+Q 207.359453 382.32 215.090364 382.32 
+" style="fill: none; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+   <path d="M 207.890364 378.72 
+L 215.090364 382.32 
+L 207.890364 385.92 
+z
+" style="fill: #898781; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+  </g>
+  <g id="patch_14">
+   <path d="M 380.16 453.6 
+L 483.84 453.6 
+Q 495.36 453.6 495.36 447.12 
+L 495.36 317.52 
+Q 495.36 311.04 483.84 311.04 
+L 380.16 311.04 
+Q 368.64 311.04 368.64 317.52 
+L 368.64 447.12 
+Q 368.64 453.6 380.16 453.6 
+z
+" style="fill: #f3f2ee; stroke: #e1e0d9; stroke-linejoin: miter"/>
+  </g>
+  <g id="patch_15">
+   <path d="M 347.599687 382.32 
+Q 357.119453 382.32 364.850364 382.32 
+" style="fill: none; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+   <path d="M 357.650364 378.72 
+L 364.850364 382.32 
+L 357.650364 385.92 
+z
+" style="fill: #898781; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+  </g>
+  <g id="patch_16">
+   <path d="M 529.92 453.6 
+L 633.6 453.6 
+Q 645.12 453.6 645.12 447.12 
+L 645.12 317.52 
+Q 645.12 311.04 633.6 311.04 
+L 529.92 311.04 
+Q 518.4 311.04 518.4 317.52 
+L 518.4 447.12 
+Q 518.4 453.6 529.92 453.6 
+z
+" style="fill: #f3f2ee; stroke: #e1e0d9; stroke-linejoin: miter"/>
+  </g>
+  <g id="patch_17">
+   <path d="M 497.359687 382.32 
+Q 506.879453 382.32 514.610364 382.32 
+" style="fill: none; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+   <path d="M 507.410364 378.72 
+L 514.610364 382.32 
+L 507.410364 385.92 
+z
+" style="fill: #898781; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+  </g>
+  <g id="patch_18">
+   <path d="M 679.68 453.6 
+L 783.36 453.6 
+Q 794.88 453.6 794.88 447.12 
+L 794.88 317.52 
+Q 794.88 311.04 783.36 311.04 
+L 679.68 311.04 
+Q 668.16 311.04 668.16 317.52 
+L 668.16 447.12 
+Q 668.16 453.6 679.68 453.6 
+z
+" style="fill: #f3f2ee; stroke: #2a78d6; stroke-width: 2; stroke-linejoin: miter"/>
+  </g>
+  <g id="patch_19">
+   <path d="M 647.119687 382.32 
+Q 656.639453 382.32 664.370364 382.32 
+" style="fill: none; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+   <path d="M 657.170364 378.72 
+L 664.370364 382.32 
+L 657.170364 385.92 
+z
+" style="fill: #898781; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+  </g>
+  <g id="patch_20">
+   <path d="M 829.44 453.6 
+L 933.12 453.6 
+Q 944.64 453.6 944.64 447.12 
+L 944.64 317.52 
+Q 944.64 311.04 933.12 311.04 
+L 829.44 311.04 
+Q 817.92 311.04 817.92 317.52 
+L 817.92 447.12 
+Q 817.92 453.6 829.44 453.6 
+z
+" style="fill: #f3f2ee; stroke: #e1e0d9; stroke-linejoin: miter"/>
+  </g>
+  <g id="patch_21">
+   <path d="M 796.879687 382.32 
+Q 806.399453 382.32 814.130364 382.32 
+" style="fill: none; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+   <path d="M 806.930364 378.72 
+L 814.130364 382.32 
+L 806.930364 385.92 
+z
+" style="fill: #898781; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+  </g>
+  <g id="patch_22">
+   <path d="M 979.2 453.6 
+L 1082.88 453.6 
+Q 1094.4 453.6 1094.4 447.12 
+L 1094.4 317.52 
+Q 1094.4 311.04 1082.88 311.04 
+L 979.2 311.04 
+Q 967.68 311.04 967.68 317.52 
+L 967.68 447.12 
+Q 967.68 453.6 979.2 453.6 
+z
+" style="fill: #f3f2ee; stroke: #e1e0d9; stroke-linejoin: miter"/>
+  </g>
+  <g id="patch_23">
+   <path d="M 946.639687 382.32 
+Q 956.159453 382.32 963.890364 382.32 
+" style="fill: none; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+   <path d="M 956.690364 378.72 
+L 963.890364 382.32 
+L 956.690364 385.92 
+z
+" style="fill: #898781; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+  </g>
+  <g id="patch_24">
+   <path d="M 432 283.876919 
+Q 432 296.458744 432 307.251715 
+" style="fill: none; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+   <path d="M 435.6 300.051715 
+L 432 307.251715 
+L 428.4 300.051715 
+z
+" style="fill: #898781; stroke: #898781; stroke-width: 1.6; stroke-linecap: round"/>
+  </g>
+  <g id="patch_25">
+   <path d="M 432 480.763081 
+Q 432 468.181256 432 457.388285 
+" style="fill: none; stroke: #eb6834; stroke-width: 1.6; stroke-linecap: round"/>
+   <path d="M 428.4 464.588285 
+L 432 457.388285 
+L 435.6 464.588285 
+z
+" style="fill: #eb6834; stroke: #eb6834; stroke-width: 1.6; stroke-linecap: round"/>
+  </g>
+  <g id="patch_26">
+   <path d="M 80.64 615.6 
+L 1082.88 615.6 
+Q 1094.4 615.6 1094.4 609.12 
+L 1094.4 557.28 
+Q 1094.4 550.8 1082.88 550.8 
+L 80.64 550.8 
+Q 69.12 550.8 69.12 557.28 
+L 69.12 609.12 
+Q 69.12 615.6 80.64 615.6 
+z
+" style="fill: #f3f2ee; stroke: #e1e0d9; stroke-linejoin: miter"/>
+  </g>
+  <g id="line2d_1">
+   <path d="M 956.16 252.72 
+L 956.16 281.88 
+" style="fill: none; stroke: #898781; stroke-width: 1.6; stroke-linecap: square"/>
+  </g>
+  <g id="line2d_2">
+   <path d="M 956.16 281.88 
+L 432 281.88 
+" style="fill: none; stroke: #898781; stroke-width: 1.6; stroke-linecap: square"/>
+  </g>
+  <g id="line2d_3">
+   <path d="M 881.28 453.6 
+L 881.28 482.76 
+" style="fill: none; stroke: #eb6834; stroke-width: 2.2; stroke-linecap: square"/>
+  </g>
+  <g id="line2d_4">
+   <path d="M 881.28 482.76 
+L 432 482.76 
+" style="fill: none; stroke: #eb6834; stroke-width: 2.2; stroke-linecap: square"/>
+  </g>
+  <g id="text_1">
+   <text style="font-weight: 700; font-size: 34px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="69.12" y="44.684727" transform="rotate(-0 69.12 44.684727)">Technical workflow</text>
+  </g>
+  <g id="text_2">
+   <text style="font-size: 19px; font-family: 'Segoe UI'; text-anchor: start; fill: #52514e" x="69.12" y="76.529063" transform="rotate(-0 69.12 76.529063)">Built once offline, then every question runs the online pipeline. Everything runs locally except the RAGAS judge.</text>
+  </g>
+  <g id="text_3">
+   <text style="font-weight: 700; font-size: 13px; font-family: 'Segoe UI'; text-anchor: start; fill: #52514e" x="69.12" y="119.08816" transform="rotate(-0 69.12 119.08816)">OFFLINE · BUILD ONCE  (527 clause chunks)</text>
+  </g>
+  <g id="text_4">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="78.336" y="152.18441" transform="rotate(-0 78.336 152.18441)">PDF corpus</text>
+  </g>
+  <g id="text_5">
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(78.336 180.974848)">13 SERC / MoP</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(78.336 196.94973)">documents: 5</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(78.336 212.155863)">states + central</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(78.336 227.359184)">rules</text>
+  </g>
+  <g id="text_6">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="228.096" y="152.18441" transform="rotate(-0 228.096 152.18441)">Extract text</text>
+  </g>
+  <g id="text_7">
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(228.096 180.47141)">pypdf; strip page</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(228.096 195.61098)">numbers, running</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(228.096 211.452738)">headers, tables</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(228.096 227.422934)">of contents</text>
+  </g>
+  <g id="text_8">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="377.856" y="152.368688" transform="rotate(-0 377.856 152.368688)">Clause chunks</text>
+  </g>
+  <g id="text_9">
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(377.856 180.439535)">Split on clause</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(377.856 196.249418)">numbers; 250–1800</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(377.856 212.155863)">characters each</text>
+  </g>
+  <g id="text_10">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="527.616" y="152.368688" transform="rotate(-0 527.616 152.368688)">Tag metadata</text>
+  </g>
+  <g id="text_11">
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(527.616 180.40766)">State, authority,</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(527.616 195.61098)">doc type, date,</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(527.616 211.516488)">draft/final,</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(527.616 227.359184)">amended clauses</text>
+  </g>
+  <g id="text_12">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="827.136" y="152.368688" transform="rotate(-0 827.136 152.368688)">Indexes</text>
+  </g>
+  <g id="text_13">
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(827.136 180.40766)">ChromaDB, nomic-embed-text embeddings</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(827.136 195.61098)">(768-d, cosine) + BM25 keyword index</text>
+  </g>
+  <g id="text_14">
+   <text style="font-size: 12px; font-family: 'Segoe UI'; text-anchor: middle; fill: #898781" x="731.52" y="181.44" transform="rotate(-0 731.52 181.44)">embed + index</text>
+  </g>
+  <g id="text_15">
+   <text style="font-weight: 700; font-size: 13px; font-family: 'Segoe UI'; text-anchor: start; fill: #52514e" x="69.12" y="300.52816" transform="rotate(-0 69.12 300.52816)">ONLINE · EVERY QUESTION</text>
+  </g>
+  <g id="text_16">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="78.336" y="333.771187" transform="rotate(-0 78.336 333.771187)">Question</text>
+  </g>
+  <g id="text_17">
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(78.336 361.677035)">e.g. “Net</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(78.336 376.99473)">metering cap in</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(78.336 392.254301)">Rajasthan?”</text>
+  </g>
+  <g id="text_18">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="228.096" y="333.808688" transform="rotate(-0 228.096 333.808688)">Understand</text>
+  </g>
+  <g id="text_19">
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(228.096 362.063285)">Detect state(s);</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(228.096 377.082855)">split</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(228.096 392.229926)">comparisons;</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(228.096 408.862934)">decline if state</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(228.096 424.002504)">not covered</text>
+  </g>
+  <g id="text_20">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="377.856" y="333.808688" transform="rotate(-0 377.856 333.808688)">Hybrid search</text>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(377.856 361.70891)">BM25 top 25 +</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(377.856 377.082855)">dense top 25</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(377.856 393.595863)">inside the state</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(377.856 408.159809)">filter; RRF</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(377.856 424.066254)">fusion</text>
+  </g>
+  <g id="text_22">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="527.616" y="333.808688" transform="rotate(-0 527.616 333.808688)">Rerank</text>
+  </g>
+  <g id="text_23">
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(527.616 363.132973)">MiniLM cross-</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(527.616 378.392543)">encoder scores</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(527.616 392.286176)">30; keep top 5</text>
+  </g>
+  <g id="text_24">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="677.376" y="333.808688" transform="rotate(-0 677.376 333.808688)">Amendments</text>
+  </g>
+  <g id="text_25">
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(677.376 363.189223)">Find later</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(677.376 377.11473)">orders; flag</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(677.376 392.286176)">superseded</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(677.376 408.096059)">clauses; newest</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(677.376 424.066254)">first</text>
+  </g>
+  <g id="text_26">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="827.136" y="333.62441" transform="rotate(-0 827.136 333.62441)">Generate</text>
+  </g>
+  <g id="text_27">
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(827.136 363.18641)">llama3.2 via</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(827.136 377.507543)">Ollama; cite [S#]</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(827.136 391.700238)">on every sentence</text>
+  </g>
+  <g id="text_28">
+   <text style="font-weight: 700; font-size: 15px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="976.896" y="333.62441" transform="rotate(-0 976.896 333.62441)">Answer</text>
+  </g>
+  <g id="text_29">
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(976.896 362.486098)">Clause, order and</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(976.896 377.689418)">date, or “can't</text>
+   <text style="font-size: 12px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(976.896 393.425238)">answer”</text>
+  </g>
+  <g id="text_30">
+   <text style="font-size: 12px; font-family: 'Segoe UI'; text-anchor: middle; fill: #898781" x="694.08" y="274.170609" transform="rotate(-0 694.08 274.170609)">retrieve from both indexes (state-filtered)</text>
+  </g>
+  <g id="text_31">
+   <text style="font-size: 12.5px; font-family: 'Segoe UI'; text-anchor: middle; fill: #0b0b0b" x="656.64" y="499.922719" transform="rotate(-0 656.64 499.922719)">Agent mode (LangGraph): verify the answer is grounded → rewrite the query → retry once; roll back if the retry retrieves worse sources</text>
+  </g>
+  <g id="text_32">
+   <text style="font-weight: 700; font-size: 13px; font-family: 'Segoe UI'; text-anchor: start; fill: #52514e" x="69.12" y="540.28816" transform="rotate(-0 69.12 540.28816)">EVALUATE</text>
+  </g>
+  <g id="text_33">
+   <text style="font-size: 13px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(82.944 577.332354)">34 hand-written questions  →  retrieval metrics (hit@5, MRR, contamination; no LLM)  ·  answer metrics (decline accuracy, citations, key numbers)</text>
+   <text style="font-size: 13px; font-family: 'Segoe UI'; fill: #52514e" transform="translate(82.944 595.701709)">·  RAGAS faithfulness, context precision, answer relevancy (judge: Groq gpt-oss-120b)  ·  11 unit tests (pytest)</text>
+  </g>
+ </g>
+</svg>

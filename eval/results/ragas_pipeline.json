@@ -1,0 +1,12 @@
+{
+  "faithfulness": 0.64,
+  "llm_context_precision_with_reference": 0.789,
+  "answer_relevancy": 0.803,
+  "n": 32,
+  "n_scored": {
+    "faithfulness": 32,
+    "llm_context_precision_with_reference": 31,
+    "answer_relevancy": 32
+  },
+  "judge": "groq:openai/gpt-oss-120b"
+}

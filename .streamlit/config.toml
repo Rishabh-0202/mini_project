@@ -1,0 +1,9 @@
+# Streamlit's file watcher walks every imported module; on `transformers` (used by the
+# reranker) that triggers imports of vision models needing torchvision, which floods the
+# console with tracebacks. The app doesn't need hot-reload, so the watcher is off.
+[server]
+fileWatcherType = "none"
+runOnSave = false
+
+[browser]
+gatherUsageStats = false

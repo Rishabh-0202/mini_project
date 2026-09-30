@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+
+# Third-party regulation PDFs - fetch with scripts/download_docs.py
+data/raw/
+# Rebuilt by `python -m regrag.ingest` / `python -m regrag.index`
+data/processed/
+data/chroma/

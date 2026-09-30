@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1152pt" height="648pt" viewBox="0 0 1152 648" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-30T19:02:14.107848</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 648 
+L 1152 648 
+L 1152 0 
+L 0 0 
+z
+" style="fill: #fcfcfb"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 380.16 570.24 
+L 1071.36 570.24 
+L 1071.36 116.64 
+L 380.16 116.64 
+z
+" style="fill: #fcfcfb"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 380.16 570.24 
+L 380.16 116.64 
+" clip-path="url(#p2d7eea9978)" style="fill: none; stroke: #e1e0d9; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <text style="font-size: 15px; font-family: 'Segoe UI'; text-anchor: middle; fill: #898781" x="380.16" y="584.66041" transform="rotate(-0 380.16 584.66041)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 540.16 570.24 
+L 540.16 116.64 
+" clip-path="url(#p2d7eea9978)" style="fill: none; stroke: #e1e0d9; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <text style="font-size: 15px; font-family: 'Segoe UI'; text-anchor: middle; fill: #898781" x="540.16" y="584.66041" transform="rotate(-0 540.16 584.66041)">0.25</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 700.16 570.24 
+L 700.16 116.64 
+" clip-path="url(#p2d7eea9978)" style="fill: none; stroke: #e1e0d9; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <text style="font-size: 15px; font-family: 'Segoe UI'; text-anchor: middle; fill: #898781" x="700.16" y="584.66041" transform="rotate(-0 700.16 584.66041)">0.5</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 860.16 570.24 
+L 860.16 116.64 
+" clip-path="url(#p2d7eea9978)" style="fill: none; stroke: #e1e0d9; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <text style="font-size: 15px; font-family: 'Segoe UI'; text-anchor: middle; fill: #898781" x="860.16" y="584.66041" transform="rotate(-0 860.16 584.66041)">0.75</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 1020.16 570.24 
+L 1020.16 116.64 
+" clip-path="url(#p2d7eea9978)" style="fill: none; stroke: #e1e0d9; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_5">
+      <text style="font-size: 15px; font-family: 'Segoe UI'; text-anchor: middle; fill: #898781" x="1020.16" y="584.66041" transform="rotate(-0 1020.16 584.66041)">1.0</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_11"/>
+     <g id="text_6">
+      <text style="font-size: 17px; font-family: 'Segoe UI'; text-anchor: end; fill: #52514e" x="376.66" y="158.380621" transform="rotate(-0 376.66 158.380621)">Right clause reached the model</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_12"/>
+     <g id="text_7">
+      <text style="font-size: 17px; font-family: 'Segoe UI'; text-anchor: end; fill: #52514e" x="376.66" y="206.21863" transform="rotate(-0 376.66 206.21863)">Source in top 5 (hit@5)</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_13"/>
+     <g id="text_8">
+      <text style="font-size: 17px; font-family: 'Segoe UI'; text-anchor: end; fill: #52514e" x="376.66" y="254.056639" transform="rotate(-0 376.66 254.056639)">Mean reciprocal rank</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_14"/>
+     <g id="text_9">
+      <text style="font-size: 17px; font-family: 'Segoe UI'; text-anchor: end; fill: #52514e" x="376.66" y="301.81496" transform="rotate(-0 376.66 301.81496)">RAGAS context precision</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_15"/>
+     <g id="text_10">
+      <text style="font-size: 17px; font-family: 'Segoe UI'; text-anchor: end; fill: #52514e" x="376.66" y="397.570665" transform="rotate(-0 376.66 397.570665)">Answers with citations</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_16"/>
+     <g id="text_11">
+      <text style="font-size: 17px; font-family: 'Segoe UI'; text-anchor: end; fill: #52514e" x="376.66" y="445.408674" transform="rotate(-0 376.66 445.408674)">RAGAS answer relevancy</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_17"/>
+     <g id="text_12">
+      <text style="font-size: 17px; font-family: 'Segoe UI'; text-anchor: end; fill: #52514e" x="376.66" y="493.336995" transform="rotate(-0 376.66 493.336995)">RAGAS faithfulness</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_18"/>
+     <g id="text_13">
+      <text style="font-size: 17px; font-family: 'Segoe UI'; text-anchor: end; fill: #52514e" x="376.66" y="541.084692" transform="rotate(-0 376.66 541.084692)">Key numbers present in answer</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 380.16 166.917747 
+L 1020.16 166.917747 
+L 1020.16 137.258182 
+L 380.16 137.258182 
+z
+" clip-path="url(#p2d7eea9978)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 380.16 214.755756 
+L 1000.32 214.755756 
+L 1000.32 185.096191 
+L 380.16 185.096191 
+z
+" clip-path="url(#p2d7eea9978)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 380.16 262.593765 
+L 965.12 262.593765 
+L 965.12 232.9342 
+L 380.16 232.9342 
+z
+" clip-path="url(#p2d7eea9978)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 380.16 310.431774 
+L 885.12 310.431774 
+L 885.12 280.772208 
+L 380.16 280.772208 
+z
+" clip-path="url(#p2d7eea9978)" style="fill: #2a78d6"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 380.16 406.107792 
+L 980.48 406.107792 
+L 980.48 376.448226 
+L 380.16 376.448226 
+z
+" clip-path="url(#p2d7eea9978)" style="fill: #eb6834"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 380.16 453.9458 
+L 894.08 453.9458 
+L 894.08 424.286235 
+L 380.16 424.286235 
+z
+" clip-path="url(#p2d7eea9978)" style="fill: #eb6834"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 380.16 501.783809 
+L 789.76 501.783809 
+L 789.76 472.124244 
+L 380.16 472.124244 
+z
+" clip-path="url(#p2d7eea9978)" style="fill: #eb6834"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 380.16 549.621818 
+L 789.12 549.621818 
+L 789.12 519.962253 
+L 380.16 519.962253 
+z
+" clip-path="url(#p2d7eea9978)" style="fill: #eb6834"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 380.16 570.24 
+L 380.16 116.64 
+" style="fill: none; stroke: #c3c2b7; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 380.16 570.24 
+L 1071.36 570.24 
+" style="fill: none; stroke: #c3c2b7; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="1027.84" y="156.487379" transform="rotate(-0 1027.84 156.487379)">1.000</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="1008" y="204.325387" transform="rotate(-0 1008 204.325387)">0.969</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="972.8" y="252.163396" transform="rotate(-0 972.8 252.163396)">0.914</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="892.8" y="300.001405" transform="rotate(-0 892.8 300.001405)">0.789</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="988.16" y="395.677423" transform="rotate(-0 988.16 395.677423)">0.938</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="901.76" y="443.515432" transform="rotate(-0 901.76 443.515432)">0.803</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="797.44" y="491.353441" transform="rotate(-0 797.44 491.353441)">0.640</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 17px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="796.8" y="539.191449" transform="rotate(-0 796.8 539.191449)">0.639</text>
+   </g>
+  </g>
+  <g id="text_22">
+   <text style="font-weight: 700; font-size: 34px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="69.12" y="43.855312" transform="rotate(-0 69.12 43.855312)">Retrieval is near-perfect; generation is the gap</text>
+  </g>
+  <g id="text_23">
+   <text style="font-size: 19px; font-family: 'Segoe UI'; text-anchor: start; fill: #52514e" x="69.12" y="76.529063" transform="rotate(-0 69.12 76.529063)">Every metric on a 0–1 scale. Blue: finding the right clause. Orange: answering from it.</text>
+  </g>
+  <g id="text_24">
+   <text style="font-size: 14px; font-family: 'Segoe UI'; text-anchor: start; fill: #898781" x="69.12" y="625.32" transform="rotate(-0 69.12 625.32)">RAGAS judge: Groq openai/gpt-oss-120b. Context precision scored on 31 of 32 answered questions.</text>
+  </g>
+  <g id="legend_1">
+   <g id="patch_13">
+    <path d="M 686.785312 108.885313 
+L 720.785312 108.885313 
+L 720.785312 96.985313 
+L 686.785312 96.985313 
+z
+" style="fill: #2a78d6; stroke: #2a78d6; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 17px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="734.385312" y="108.885313" transform="rotate(-0 734.385312 108.885313)">Retrieval</text>
+   </g>
+   <g id="patch_14">
+    <path d="M 832.536406 108.885313 
+L 866.536406 108.885313 
+L 866.536406 96.985313 
+L 832.536406 96.985313 
+z
+" style="fill: #eb6834; stroke: #eb6834; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 17px; font-family: 'Segoe UI'; text-anchor: start; fill: #0b0b0b" x="880.136406" y="108.885313" transform="rotate(-0 880.136406 108.885313)">Generation (llama3.2, 3B)</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p2d7eea9978">
+   <rect x="380.16" y="116.64" width="691.2" height="453.6"/>
+  </clipPath>
+ </defs>
+</svg>
