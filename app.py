@@ -39,7 +39,8 @@ with st.sidebar:
     use_agent = st.toggle("Agentic mode (LangGraph)", value=False,
                           help="Adds a groundedness check and re-retrieves with a reformulated query if the answer "
                                "is not supported. Roughly 2x slower.")
-    st.caption(f"LLM `{config.LLM_MODEL}` · embeddings `{config.EMBED_MODEL}` · reranker `{config.RERANK_MODEL.split('/')[-1]}`")
+    st.caption(f"LLM `{config.ANSWER_MODEL}` ({config.LLM_PROVIDER}) · embeddings `{config.EMBED_MODEL}` · "
+               f"reranker `{config.RERANK_MODEL.split('/')[-1]}`")
     st.divider()
     st.subheader("Example questions")
     for ex in EXAMPLES:
@@ -66,7 +67,8 @@ if question:
 
     load()
     t = time.time()
-    with st.spinner("Retrieving, checking amendments and generating (local CPU inference can take 1-2 minutes)..."):
+    wait = "a few seconds" if config.LLM_PROVIDER == "groq" else "1-2 minutes on a local CPU"
+    with st.spinner(f"Retrieving, checking amendments and generating ({wait})..."):
         if use_agent:
             from regrag.graph import run as run_agent
             result, trace = run_agent(question)

@@ -17,6 +17,7 @@ from typing import TypedDict
 from langchain_core.messages import HumanMessage, SystemMessage
 from langgraph.graph import END, StateGraph
 
+from . import config
 from .generate import Answer, format_sources, generate, llm
 from .pipeline import Result, combine, components, state_scope
 from .query import SubQuery, decompose, is_comparison, out_of_scope_message
@@ -96,8 +97,18 @@ Return JSON: {"grounded": true|false, "unsupported": "<the first unsupported cla
 A claim is supported only if its facts and numbers appear in SOURCES."""
 
 
+def _json_object(text: str) -> dict:
+    """The first {...} object in a reply (hosted models may wrap JSON in prose or code fences)."""
+    start, end = text.find("{"), text.rfind("}")
+    if start != -1 and end > start:
+        text = text[start:end + 1]
+    return json.loads(text)
+
+
 def verify(state: GraphState) -> dict:
-    judge = llm().bind(format="json")
+    judge = llm(num_predict=160)                       # a verdict is ~30 tokens
+    if config.LLM_PROVIDER == "ollama":
+        judge = judge.bind(format="json")              # Ollama's JSON mode keeps the small model on format
     trace = []
     for slot in state["slots"]:
         a = slot["answer"]
@@ -116,7 +127,7 @@ def verify(state: GraphState) -> dict:
             continue
         msg = f"SOURCES:\n{format_sources(slot['hits'], 1200)}\n\nANSWER:\n{a.text}"
         try:
-            verdict = json.loads(judge.invoke([SystemMessage(VERIFY_PROMPT), HumanMessage(msg)]).content)
+            verdict = _json_object(judge.invoke([SystemMessage(VERIFY_PROMPT), HumanMessage(msg)]).content)
             judged = bool(verdict.get("grounded", False))
             ok = judged and bool(a.citations)
             if ok:
@@ -145,7 +156,7 @@ def _valid_rewrite(new_q: str, slot: Slot) -> bool:
 
 
 def reformulate(state: GraphState) -> dict:
-    model = llm(temperature=0.0)
+    model = llm(temperature=0.0, num_predict=80)        # one rewritten question
     trace = []
     for slot in state["slots"]:
         if slot["grounded"] is False and slot["attempts"] <= MAX_RETRIES:

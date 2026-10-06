@@ -30,6 +30,9 @@ def test_comparison_is_split_into_one_subquery_per_state():
     subs = decompose("Compare transformer limits in Gujarat and Maharashtra")
     assert [s.state for s in subs] == ["Gujarat", "Maharashtra"]
     assert all(s.text.endswith(f"in {s.state}?") for s in subs)
+    assert subs[0].text == "What are transformer limits in Gujarat?"
+    subs = decompose("Compare the transformer limits for rooftop solar in Gujarat and Maharashtra.")
+    assert subs[1].text == "What are the transformer limits for rooftop solar in Maharashtra?"
     assert "Maharashtra" not in subs[0].text
     subs = decompose("What is the maximum net metering capacity in Gujarat versus Rajasthan?")
     assert subs[1].text == "What is the maximum net metering capacity in Rajasthan?"
@@ -108,3 +111,11 @@ def test_eval_key_fact_normalisation():
 def test_grouped_citations_are_parsed():
     from regrag.generate import cited_ids
     assert cited_ids("limit is 1 MW [S2, S3] and 70% [S1]; see [S4; S5]") == [2, 3, 1, 4, 5]
+
+
+def test_hosted_model_citation_styles_are_normalised():
+    from regrag.generate import cited_ids, tidy
+    text = tidy("cap is 1 MW [ S1 ] and 65 % 【S4】 per [S2†L3-L9]")
+    assert cited_ids(text) == [1, 4, 2]
+    assert "[S1]" in text and "†" not in text
+    assert cited_ids("6 kW [S2-Clause 3, 2024-09-04]; see [Section 5]") == [2]

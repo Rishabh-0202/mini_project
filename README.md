@@ -8,8 +8,10 @@ such as *"What is the net metering limit in Rajasthan?"* using only the regulati
 cites the **clause, order and date** it relies on, flags clauses that a later amendment may have
 **superseded**, and **abstains** when the indexed documents don't cover the question.
 
-Everything runs locally: Ollama `llama3.2` generates the answers and `nomic-embed-text` produces
-the embeddings, so no API keys are needed.
+**Models.** Answers are written by **Groq `openai/gpt-oss-120b`** by default, which needs `GROQ_API_KEY`
+in `.env`. Embeddings (`nomic-embed-text` via Ollama) and reranking (a MiniLM cross-encoder) always run
+locally. To run fully offline, set `LLM_PROVIDER=ollama` in `.env`; answers then come from local
+`llama3.2`, which is less accurate (see *Results*).
 
 ## Architecture
 
@@ -74,7 +76,9 @@ Sources and dates are listed in `data/manifest.json`. **Known gaps:**
 uv venv .venv --python 3.12            # Python 3.12 recommended
 uv pip install --python .venv/Scripts/python.exe torch --index-url https://download.pytorch.org/whl/cpu
 uv pip install --python .venv/Scripts/python.exe -r requirements.txt
-ollama pull llama3.2 && ollama pull nomic-embed-text
+ollama pull nomic-embed-text           # embeddings (always local)
+ollama pull llama3.2                   # only needed for LLM_PROVIDER=ollama
+copy .env.example .env                 # then add your GROQ_API_KEY
 ```
 
 ```bash
@@ -92,6 +96,22 @@ streamlit run app.py
 pytest tests
 python scripts/make_figures.py         # presentation figures -> docs/figures/ (PNG + SVG)
 ```
+
+## Notebooks
+
+| Notebook | Where | What it does |
+|---|---|---|
+| `notebooks/RegRAG_walkthrough.ipynb` | Local (VS Code, kernel "Python (RegRAG .venv)") | Runs the pipeline one step at a time, showing chunks, BM25 vs dense vs fused rankings, reranker scores, amendment flags, the prompt, answers, the agent trace and evaluation results |
+| `notebooks/RegRAG_colab.ipynb` | Google Colab (T4 GPU recommended) | Installs everything inside Colab (packages, Ollama, models, PDFs, index), then runs the same walkthrough |
+
+For Colab, build the upload bundle first. It excludes `.env`, `.venv`, PDFs and indexes:
+
+```bash
+python scripts/make_colab_bundle.py    # -> dist/regrag_colab.zip
+```
+
+Then open `RegRAG_colab.ipynb` in Colab (**File → Upload notebook**), switch to a T4 GPU runtime,
+**Run all**, and upload the zip when prompted.
 
 ## Evaluation
 
@@ -183,16 +203,23 @@ added a warning. It takes about 3 minutes per question on CPU.
 
 ## Limitations
 
-- **The local 3B model is the weak link.** Retrieval is strong, but `llama3.2` sometimes garbles
-  citations or over-hedges, and it also serves as the RAGAS judge, which makes RAGAS scores noisy.
-  Set `LLM_MODEL` (see `.env.example`) to a larger model if you have a GPU.
+- **The evaluation numbers above were measured with local `llama3.2` (3B).** The weak points (wrong
+  table rows, missed sub-answers, faithfulness 0.64) came from that model, which is why the default
+  answer model is now Groq `gpt-oss-120b`. In spot checks it answered questions correctly where
+  `llama3.2` failed (the Gujarat 50% exemption, the Maharashtra 70% transformer limit). Re-run
+  `eval/run_eval.py answers` and `ragas` to measure it formally.
+- **Using Groq sends the question and the retrieved regulation text** (public documents) to Groq's
+  API, and uses free-tier quota. `LLM_PROVIDER=ollama` keeps everything on the laptop.
 - **Amendment detection is heuristic.** It links clause references that appear near amending verbs.
   A Statement of Reasons that says "no modification" to a clause can still raise a *possibly
   superseded* flag, which is why the flag says "possibly".
 - **Chunking relies on text extraction.** Tables flatten to text and scanned PDFs are skipped.
-- **The groundedness verifier and query rewriter use the same 3B model**, so the agent can reject
-  correct answers. A retry is kept only if it retrieves better sources, so a bad rewrite cannot
-  replace a good answer.
-- **RAGAS needs a better judge than the local 3B model**, so it uses Groq. That sends the question,
-  answer and retrieved regulation text (all public documents) to Groq's API.
+- **The agent's verifier and rewriter use the same answer model.** With `llama3.2` they sometimes
+  rejected correct answers. A retry is kept only if it retrieves better sources, so a bad rewrite
+  cannot replace a good answer.
+- **Chunk labels can mislead.** In the package's ingestion a short clause can be merged into the
+  previous clause's chunk. For example, Gujarat's 65% transformer limit (clause 5) sits in a chunk
+  labelled clause 3.3, so a comparison question can pick a different Gujarat rule. The from-scratch
+  notebook's simpler splitter happens to keep that clause as its own chunk and answers 65% correctly;
+  merging short clauses *forward* into the next clause would fix it in the package.
 - **Not legal advice.** Always verify against the cited order.

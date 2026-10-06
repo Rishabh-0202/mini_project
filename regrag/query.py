@@ -71,7 +71,7 @@ def _strip_states(query: str) -> str:
         for a in aliases:
             out = re.sub(rf"(?i)(?<![a-z]){re.escape(a)}(?![a-z])", "", out)
     # Drop connectors left dangling by the removal ("in  versus ?" -> "?"); repeat until stable.
-    dangling = re.compile(r"(?i)\b(in|for|of|and|between|vs\.?|versus|compare|comparison)\s*(?=,|\?|$|\band\b|\bvs\b|\bversus\b)")
+    dangling = re.compile(r"(?i)\b(in|for|of|and|between|vs\.?|versus|compare|comparison)\s*(?=[,.?]|$|\band\b|\bvs\b|\bversus\b)")
     prev = None
     while prev != out:
         prev, out = out, dangling.sub("", out)
@@ -87,6 +87,8 @@ def decompose(query: str) -> list[SubQuery]:
     if len(states) == 1:
         return [SubQuery(states[0], query)]
     core = (_strip_states(query) or query).rstrip("?. ").strip()
+    # "Compare the limits" reads oddly as a single-state question: ask "What are the limits ... in Gujarat?"
+    core = re.sub(r"(?i)^(compare|contrast)\s+", "What are ", core)
     return [SubQuery(s, f"{core} in {s}?") for s in states]
 
 

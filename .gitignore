@@ -9,3 +9,8 @@ data/raw/
 # Rebuilt by `python -m regrag.ingest` / `python -m regrag.index`
 data/processed/
 data/chroma/
+# Built by scripts/make_colab_bundle.py
+dist/
+
+# Cached FAISS index built by the lab-format notebook
+data/faiss_index/

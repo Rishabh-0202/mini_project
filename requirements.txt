@@ -5,6 +5,7 @@ langchain
 langchain-core
 langchain-community
 langchain-ollama
+langchain-groq
 langchain-chroma
 langgraph
 chromadb

@@ -4,8 +4,8 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 
+from langchain_core.language_models import BaseChatModel
 from langchain_core.messages import HumanMessage, SystemMessage
-from langchain_ollama import ChatOllama
 
 from . import config
 from .retrieve import Hit
@@ -16,7 +16,7 @@ ABSTAIN_MESSAGE = ("I can't answer this from the indexed regulations - the retri
 
 SYSTEM_PROMPT = f"""You are a regulatory analyst assistant for Indian renewable-energy regulations.
 Answer ONLY from the numbered sources. Rules:
-1. Start with a direct answer to the question (e.g. "Yes", "No", or the number/limit), then explain briefly.
+1. Open with the direct answer: Yes or No for a yes/no question, otherwise the figure or limit asked for. Then explain briefly.
 2. Base the answer on CURRENT SOURCES. OLDER OR DRAFT SOURCES are for context only: if one of them
    says something different, say that the earlier/draft provision differs.
 3. End every factual sentence with its citation, e.g. [S2]. Cite only sources you used.
@@ -35,9 +35,28 @@ class Answer:
     contexts: list[str] = field(default_factory=list)
 
 
-def llm(temperature: float = 0.0) -> ChatOllama:
+def llm(temperature: float = 0.0, num_predict: int = 512) -> BaseChatModel:
+    """The answer model, chosen by config.LLM_PROVIDER.
+
+    Groq: hosted gpt-oss-120b (reliable, fast). Ollama: local llama3.2 (offline); num_predict caps its
+    output because a small model in JSON mode can pad with whitespace for minutes."""
+    if config.LLM_PROVIDER == "groq":
+        from langchain_groq import ChatGroq
+        return ChatGroq(model=config.GROQ_MODEL, temperature=temperature, max_retries=3)
+    from langchain_ollama import ChatOllama
     return ChatOllama(model=config.LLM_MODEL, base_url=config.OLLAMA_BASE_URL,
-                      temperature=temperature, num_ctx=6144)
+                      temperature=temperature, num_ctx=4096, num_predict=num_predict)
+
+
+def tidy(text: str) -> str:
+    """Normalise model output so citations parse: 【S1】, [ S1 ] and [S2†L3-L9] all become [S1]/[S2];
+    non-breaking hyphens and spaces become plain ones."""
+    text = text.replace("【", "[").replace("】", "]")
+    for odd, plain in {"‑": "-", "‐": "-", " ": " ", " ": " "}.items():
+        text = text.replace(odd, plain)
+    text = re.sub(r"(S\d+)†[^\],;]*", r"\1", text)          # [S2†L3-L9] -> [S2]
+    text = re.sub(r"\[\s+(?=S\d)", "[", text)               # [ S1 ] -> [S1 ]
+    return re.sub(r"(S\d+)\s+\]", r"\1]", text)              # [S1 ]  -> [S1]
 
 
 def is_background(h: Hit) -> bool:
@@ -72,22 +91,23 @@ def citation(i: int, h: Hit) -> dict:
             "flags": list(h.flags), "rerank": round(h.rerank, 2), "text": c.text}
 
 
-CITE_GROUP_RE = re.compile(r"\[(S\d+(?:\s*[,;]\s*S\d+)*)\]")
+# Any [...] group that contains a source id: [S2], [S2, S3], [S2; S3], [S2-Clause 3, 2024-09-04]
+CITE_GROUP_RE = re.compile(r"\[([^\[\]]*?\bS\d+[^\[\]]*)\]")
 
 
 def cited_ids(text: str) -> list[int]:
-    """Source numbers cited as [S2], or grouped as [S2, S3] / [S2; S3]."""
-    return [int(n) for group in CITE_GROUP_RE.findall(text) for n in re.findall(r"S(\d+)", group)]
+    """Source numbers cited inside square brackets, e.g. [S2], [S2, S3], [S2-Clause 3]."""
+    return [int(n) for group in CITE_GROUP_RE.findall(text) for n in re.findall(r"\bS(\d+)", group)]
 
 
-def generate(question: str, hits: list[Hit], model: ChatOllama | None = None) -> Answer:
+def generate(question: str, hits: list[Hit], model: BaseChatModel | None = None) -> Answer:
     contexts = [h.chunk.text for h in hits]
     best = max((h.rerank for h in hits), default=float("-inf"))
     if not hits or best < config.ABSTAIN_SCORE:
         return Answer(ABSTAIN_MESSAGE, True, [], contexts)
 
     prompt = f"{format_sources(hits)}\n\nQUESTION: {question}\n\nANSWER:"
-    reply = (model or llm()).invoke([SystemMessage(SYSTEM_PROMPT), HumanMessage(prompt)]).content.strip()
+    reply = tidy((model or llm()).invoke([SystemMessage(SYSTEM_PROMPT), HumanMessage(prompt)]).content.strip())
 
     cited = sorted({n for n in cited_ids(reply) if 0 < n <= len(hits)})
     # Small models sometimes append the abstain token to a real answer; keep the answer, drop the token.

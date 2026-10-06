@@ -15,8 +15,14 @@ CHROMA_DIR = ROOT / "data" / "chroma"
 COLLECTION = "re_regulations"
 
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
-LLM_MODEL = os.getenv("LLM_MODEL", "llama3.2")
-EMBED_MODEL = os.getenv("EMBED_MODEL", "nomic-embed-text")
+
+# Answer model: "groq" (hosted, needs GROQ_API_KEY) or "ollama" (local, fully offline)
+LLM_PROVIDER = os.getenv("LLM_PROVIDER", "groq").lower()
+GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
+LLM_MODEL = os.getenv("LLM_MODEL", "llama3.2")          # the local Ollama model, used when LLM_PROVIDER=ollama
+ANSWER_MODEL = GROQ_MODEL if LLM_PROVIDER == "groq" else LLM_MODEL
+
+EMBED_MODEL = os.getenv("EMBED_MODEL", "nomic-embed-text")   # embeddings always run locally via Ollama
 RERANK_MODEL = os.getenv("RERANK_MODEL", "cross-encoder/ms-marco-MiniLM-L-6-v2")
 
 # Chunking
