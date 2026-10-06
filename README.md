@@ -1,5 +1,5 @@
 # RegRAG: Q&A over Indian state renewable-energy regulations
-
+RegRag is the updated notebook as per the suggestions by the Sir.
 Assignment 3 mini-project: Rishabh Tripathi, Jagath Ponnanna PM, Yashraj Singh Srinet.
 
 Electricity regulation in India is a state subject. Net metering limits, banking, wheeling and open
