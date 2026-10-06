@@ -12,7 +12,8 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "dist" / "regrag_colab.zip"
 
 INCLUDE = ["regrag", "eval", "scripts", "tests", "notebooks", "docs/figures", ".streamlit",
-           "data/manifest.json", "app.py", "README.md", "requirements.txt", "requirements-colab.txt",
+           "data/manifest.json", "app.py", "README.md", "RegRag_updated.ipynb",
+           "requirements.txt", "requirements-colab.txt",
            ".env.example"]
 SKIP_PARTS = {"__pycache__", ".ipynb_checkpoints"}
 SKIP_NAMES = {".env"}

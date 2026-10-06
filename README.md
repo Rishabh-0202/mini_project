@@ -97,12 +97,77 @@ pytest tests
 python scripts/make_figures.py         # presentation figures -> docs/figures/ (PNG + SVG)
 ```
 
-## Notebooks
+## Project notebook: `RegRag_updated.ipynb`
+
+**This is the notebook submitted as the project.** It rebuilds the whole system as about 30 short,
+commented functions in one place, and does **not** import the `regrag` package, so every step can be
+read top to bottom. All outputs are saved, so the results can be read without running anything.
+
+### Sections
+
+| Section | What it does | Main functions |
+|---|---|---|
+| 1. Settings | Folders, models, chunk and search sizes | (variables) |
+| 2. Read & split PDFs | PDF → clean lines → clause-sized chunks with metadata. A numbered line only starts a clause if the numbering moves forward in small steps, which filters out table rows and quantities like "1 MW" | `read_pdf_lines`, `is_new_clause`, `split_into_clauses`, `amended_clauses`, `make_chunks` |
+| 3. Build indexes | ChromaDB vectors (`nomic-embed-text`, saved in `data/chroma_notebook/`) + BM25 keyword index | `search_text`, `words` |
+| 4. Understand the question | Detects the state from names, regulators, power companies and cities; declines uncovered states; splits comparisons into one question per state | `find_states`, `out_of_scope`, `question_for_state` |
+| 5. Search | BM25 + vector search inside the state filter, merged with reciprocal-rank fusion, reranked by a cross-encoder → top 5 | `vector_search`, `keyword_search`, `hybrid_search`, `rerank`, `retrieve` |
+| 6. Check amendments | Flags clauses a later final order changed, pulls in the newer version, ranks current law first | `changes_clause`, `newer_versions`, `check_amendments` |
+| 7. Write the answer | Groq `gpt-oss-120b` answers only from numbered sources, cites `[S#]`, declines if unsupported | `format_sources`, `write_answer` |
+| 8. Full pipeline | Steps 4–7 in one call; comparisons answered per state and joined | `make_plan`, `search_scope`, `join_answers`, `answer` |
+| 9. Agent (LangGraph) | Same steps as a graph, plus a self-check: verify → rewrite → retry once, keeping the first answer if the retry is worse | `classify`, `retrieve_node`, `amendments_node`, `write_node`, `verify`, `rewrite` |
+| 10. Evaluation | Runs all 34 test questions live and scores retrieval and answers; shows the saved RAGAS scores | `run_question`, `key_numbers`, `score` |
+
+### Running it
+
+1. Start Ollama (`ollama serve`) with `nomic-embed-text` pulled. It's used for the embeddings.
+2. Put `GROQ_API_KEY` in `.env`. If it's missing, the notebook asks for it.
+3. Open the notebook in VS Code, choose the kernel **Python (RegRAG .venv)** and click **Run All**.
+
+The first run builds the vector index (about 10 minutes on a CPU), which is then saved and reused.
+Section 10 asks 34 questions, taking about 9 minutes because of a pause between Groq calls for the
+free-tier rate limit. The other LLM cells take a few seconds each.
+
+### Evaluation results (section 10, live with Groq `gpt-oss-120b`)
+
+| Measure | Score | Meaning |
+|---|---|---|
+| Retrieval hit | **100%** | A clause from the expected document reached the model for every answerable question |
+| Cross-state contamination | **0%** | No clause from a state not in the question ever reached the model |
+| Decline accuracy | **97.1%** (33/34) | Answered the answerable questions and declined the others (Kerala; a Karnataka FY2026 charge) |
+| Citation rate | **100%** | Every answer cites its sources |
+| Key-number recall (automatic) | 64% | Share of the reference answer's figures (1 MW, 65%, Rs 4.50…) that appear in the answer |
+| **Correct answers, judged by hand** | **31 / 34 (91%)** | Including both two-state comparisons, all amendment questions and both decline questions |
+
+**Why key-number recall understates quality.** The automatic check counts a miss whenever any number
+from the reference answer is absent, even when the reference lists extra details the question didn't
+ask for. Of the 11 answers it flags, **8 are correct**:
+- GJ06 gives the right fee (Rs 10,000) without the other fee slabs.
+- RJ01 gives 1 MW without the old 500 kW limit.
+- MH01 omits the 1 kW minimum.
+- TN01 omits the HT capacity range.
+- KA02, GJ08, GJ09 and MS02 omit side details.
+
+**3 are real errors:**
+- **MH05** declined, although the Maharashtra registration fee is in Regulation 9.1: retrieval ranked the fee table too low.
+- **MH03** cites the right clause (11.4(c)) but doesn't say what it says.
+- **MH04** reaches the right conclusion (small consumers are exempt) for the wrong reason: it quotes a 5,000 MW rule about wheeling charges instead of the 10 kW exemption.
+
+**RAGAS** (shown in section 10 from the saved run): faithfulness **0.64**, context precision **0.79**,
+answer relevancy **0.80**. These were measured when answers came from the local `llama3.2` (3B), before
+answers switched to Groq. Re-running RAGAS for the Groq answers needs more tokens than Groq's free daily
+quota allows in one go, so it would have to be spread over two days with `eval/run_eval.py ragas --ids …`.
+
+*LLM wording can vary between runs, so the exact list of flagged answers may differ slightly on a re-run.*
+
+## Other notebooks (`notebooks/`)
 
 | Notebook | Where | What it does |
 |---|---|---|
-| `notebooks/RegRAG_walkthrough.ipynb` | Local (VS Code, kernel "Python (RegRAG .venv)") | Runs the pipeline one step at a time, showing chunks, BM25 vs dense vs fused rankings, reranker scores, amendment flags, the prompt, answers, the agent trace and evaluation results |
-| `notebooks/RegRAG_colab.ipynb` | Google Colab (T4 GPU recommended) | Installs everything inside Colab (packages, Ollama, models, PDFs, index), then runs the same walkthrough |
+| `notebooks/RegRAG_run_all.ipynb` | Local | The shortest tour: runs each `regrag` file once (config → ingest → index → query → retrieve → amendments → generate → pipeline → graph → tests) |
+| `notebooks/RegRAG_walkthrough.ipynb` | Local (VS Code, kernel "Python (RegRAG .venv)") | Runs the `regrag` package one step at a time, showing chunks, BM25 vs dense vs fused rankings, reranker scores, amendment flags, the prompt, answers, the agent trace and the saved evaluation results |
+| `notebooks/RegRAG - RAG With LangGraph.ipynb` | Local | The project in the class-lab format (`init_chat_model` + Groq, FAISS, LangGraph `StateGraph`) |
+| `notebooks/RegRAG_colab.ipynb` | Google Colab (T4 GPU recommended) | Installs everything inside Colab (packages, Ollama, embedding model, PDFs, index), asks for the Groq key, then runs the walkthrough |
 
 For Colab, build the upload bundle first. It excludes `.env`, `.venv`, PDFs and indexes:
 
@@ -132,6 +197,10 @@ python eval/run_eval.py judge-check    # verify the RAGAS judge (GROQ_API_KEY in
 python eval/run_eval.py ragas          # RAGAS faithfulness / context precision / answer relevancy
 python eval/run_eval.py report
 ```
+
+The project notebook's section 10 runs this same test set live with Groq; its results are in
+[*Project notebook*](#project-notebook-regrag_updatedipynb) above. The tables below are from the
+`regrag` package's full evaluation, run earlier with the local model.
 
 ### Results (linear pipeline, `llama3.2` 3B on a CPU-only laptop)
 
